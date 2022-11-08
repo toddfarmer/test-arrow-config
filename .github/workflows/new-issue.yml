@@ -25,3 +25,6 @@ jobs:
       - uses: actions-ecosystem/action-add-labels@v1
         with:
           labels: "Component: ${{ steps.parse.outputs.data.component.text }}"
+      - run: echo "${{ steps.parse.outputs.data.component }}"
+      - run: echo "${{ steps.parse.outputs.data.compnent.text }}"
+      
