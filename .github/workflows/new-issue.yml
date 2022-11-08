@@ -21,9 +21,6 @@ jobs:
       - name: Issue Forms Body Parser
         id: parse
         uses: zentered/issue-forms-body-parser@v1.5.1
-      - run: |
-          export FOO=steps.parse.outputs.data.component.text
-          echo "::set-env name=FOO::$FOO"
       - uses: actions-ecosystem/action-add-labels@v1
         with:
           labels: "Component: ${{ steps.parse.outputs.data.component.text }}"
