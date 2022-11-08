@@ -23,7 +23,4 @@ jobs:
         uses: zentered/issue-forms-body-parser@v1.5.1
       - uses: actions-ecosystem/action-add-labels@v1
         with:
-          labels: "Component: ${{ steps.parse.outputs.data.component.text }}"
-      - run: echo "${{ steps.parse.outputs.data }}"
-      - run: echo "${{ fromJSON(steps.parse.outputs.data).component.text }}"
-      - run: echo "${{ steps.parse.outputs.data['compnent']['text'] }}"
+          labels: "Component: ${{ fromJSON(steps.parse.outputs.data/).component.text }}"
